@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  disaster-app:
+    build: .
+    image: disaster_app:latest   
+    container_name: disaster_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    restart: always
